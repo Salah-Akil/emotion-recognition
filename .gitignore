@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Since I consumed all my data for this month, I remove h5 files from gen16 to gen18 CK
+archive/CK+/gen_18/ck_model_gen18.h5
+archive/CK+/gen_17/ck_model_gen17.h5
+archive/CK+/gen_16/ck_model_gen16.h5
+archive/Kaggle/gen_1/kaggle_model_v1.h5
