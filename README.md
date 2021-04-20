@@ -16,7 +16,9 @@ My goal was to achieve at least `+50% accuracy` on a total of 7 emotion classes,
 
 After 32 iterations on different models created (on 2 different datasets), I picked the model with the highest classification accuracy, which was tested on 2867 images and got a global emotion average accuracy of `59%`, but based on the emotion the accuracy varies form `51%` for fear to `70%` for happiness.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/best_model_kaggle_v12_cmatrix.png?raw=true)
+<p align="center">
+  <img width="461" height="390" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/best_model_kaggle_v12_cmatrix.png?raw=true">
+</p>
 
 The following headings contain the all the needed knowledge to reproduce this results, form the theory about deep learning, how face detection works, required software and hardware, to how I created the models and results achieved.
 
