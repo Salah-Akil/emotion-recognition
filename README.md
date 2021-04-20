@@ -137,3 +137,65 @@ The following headings contain the all the needed knowledge to reproduce this re
 
   
 </details>
+
+### VI. [Facial Emotions](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
+
+### VII. [Datasets](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
+
+### VIII. [Neural Networks Development](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add CK+](https://github.com/Salah-Akil/emotion-recognition/)
+  #### [2. To-Add Kaggle](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
+
+### IX. [Results](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add CK+](https://github.com/Salah-Akil/emotion-recognition/)
+  #### [2. To-Add Kaggle](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
+
+### X. [Requirements](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
+
+### XI. [Hardware](https://github.com/Salah-Akil/emotion-recognition/)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+
+  
+</details>
