@@ -16,7 +16,7 @@ A grayscale image just need information about how bright a particular pixel is, 
 
 1 Byte = 8 bits &rarr; 256 possible values
 
-![alt text](images\camerino_grayscale.png "Grayscale Image Representation")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_grayscale.png?raw=true "Grayscale Image Representation")
 
 So in the memory a grayscale image is represented by a two dimensional array of bytes. The dimensions of this array (called also "channel") are equal to the height and width of the image. So, a grayscale image has only one channel. And this channel represents the intensity of gray.
 
@@ -30,15 +30,15 @@ A normal JPEG image supports more than 16 million different colors. In order to 
 
 Since an 8-bit image allows us 256 shaded of grey per channel, for a 24-bit we can use 3 channels (R,G,B).
 
-<!-- ![alt text](images\colorspace_example.png "RGB") -->
+<!-- ![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/colorspace_example.png?raw=true "RGB") -->
 
 <p align="center">
-  <img width="330" height="240" src="images\colorspace_example.png">
+  <img width="330" height="240" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/colorspace_example.png?raw=true">
 </p>
 
 We use red, green and blue since being the primary colors can be mixed together to form any other color. In fact have 256 different shades of red, green and blue (we have seen that 1 byte can store a value from 0 to 255). So by mixing these colors in different proportions, we get the desired color.
 
-![alt text](images\camerino_rgb.png "RGB Image Representation")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_rgb.png?raw=true "RGB Image Representation")
 
 
 As we can see in the image above, the color (Blue Marine) in the pixel is represented by an RGB with values set to:
@@ -61,7 +61,7 @@ Haar-Features are named after Haar Wavelets. A haar-wavelet is a sequence of res
 
 The haar features proposed by Viola and Jones are boxes composed of a light (white) part and a dark (black) side, and thanks to this contrast it's possible to determine we have found a face feature or not. This is because if we take a grayscale scale image of a face, some part will be darker than other part in the face, for example the eyebrows, lips or eyes are darker than the forehead or cheeks. Sometimes the middle section may be lighter than the adjacent boxes, in which case it can be interpreted as a nose.
 
-![alt text](images\grayscale_eyebrow_forehead.png "Grayscale Eyebrow Feature")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/grayscale_eyebrow_forehead.png?raw=true "Grayscale Eyebrow Feature")
 
 For example in the image above we can see that the eyebrow section is darker than the forehead, making the eyebrow a facial feature that we can detect with a haar feature.
 
@@ -73,12 +73,12 @@ The Viola-Jones paper identifies 3 types of Haar features:
 
 But the ones needed for face detection are the **edge features** and **line features**.
 
-![alt text](images\haar_features.png "Haar Features")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_features.png?raw=true "Haar Features")
 
 Since we can use them to represent the most relevant features of a face.
 
 <p align="center">
-    <img width="450" height="474" src="images\face_with_haar_boxes.png">
+    <img width="450" height="474" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/face_with_haar_boxes.png?raw=true">
 </p>
 
 ## 4. Algorithm
@@ -88,13 +88,13 @@ As we explained, a facial features like an eyebrow is composed of a dark part (e
 The Viola-Jones Algorithm defines an ideal scenario for a haar feature were the darker pixels are all set to 1 and the lighter pixels to 0, creating two zones (for the feature below an upper light zone and a darker bottom zone).
 
 <p align="center">
-    <img width="618" height="342" src="images\haar_pixel_ideal.png">
+    <img width="618" height="342" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_pixel_ideal.png?raw=true">
 </p>
 
 But the facial features detected in a grayscale image will have more realistic values, for example:
 
 <p align="center">
-    <img width="618" height="342" src="images\haar_pixel_real.png">
+    <img width="618" height="342" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_pixel_real.png?raw=true">
 </p>
 
 For both the ideal and real features we have to calculate the delta Δ, which represents the difference between the average sum of all pixel values of the bottom darker zone and upper lighter zone (always darker zone - lighter zone).
@@ -118,14 +118,14 @@ By repeating this operation with the other haar edge and line features across th
 
 The process of calculating the average sum of all the pixel values in the haar features (edge and line of different kernel sizes) can be time consuming, for example a single haar feature can be composed of hundreds of pixels itself, while the entire images is composed of ten of thousands of pixels, the time complexity running these operation on the entire image is **O(N<sup>2</sup>)**.
 
-![alt text](images\haar_different_kernel_size.png "Haar feature with different kernel sizes")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_different_kernel_size.png?raw=true "Haar feature with different kernel sizes")
 (***Put image of haar feature with different kernel sizes***)
 
 To solve this problem, we can use *Integral Image* approach to achieve **O(1)** running time.
 Integral Image is one of the most important tools used to accelerate features computation in many object detection applications. They are also known as Summed Area Tables and they were proposed in 1984 by Frank Crow.
 
 <p align="center">
-    <img width="640" height="480" src="images\time_complexity.png">
+    <img width="640" height="480" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/time_complexity.png?raw=true">
 </p>
 
 In order to achieve this we convert our original image into an integral image, where a given pixel *(x,y)* in the integral image is the sum of all the pixels to the left and above of the pixel *(x,y)*, including *i(x,y)*, according to equation (1), where *i(x,y)* is the value of the pixel at the position *(x,y)*.
@@ -136,9 +136,9 @@ $$
 
 For example in the images below we can see that the highlighted pixel in the integral image is the sum of all the highlighted pixels in the original image.
 
-![alt text](images\integral_image_14.png "Integral Image")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_14.png?raw=true "Integral Image")
 
-![alt text](images\integral_image_161.png "Integral Image")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_161.png?raw=true "Integral Image")
 
 We can also use recursion to calculate the computation of integral image *II(x,y)* as we can observe in the following equation (2):
 
@@ -148,7 +148,7 @@ $$
 
 Were *i(x,y)* is the pixel value in the original image.
 
-![alt text](images\integral_image_recursion.png "Integral Image")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_recursion.png?raw=true "Integral Image")
 
 For example the the pixel (x2,y1) in the integral image above can be calculated as:
 
@@ -167,7 +167,7 @@ Assuming we declare:
 - BL(x,y) as the bottom-left pixel of the same region but in the integral image
 - BR(x,y) as the bottom-right pixel of the same region but in the integral image
 
-![alt text](images\region_sum.png "Integral Image")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/region_sum.png?raw=true "Integral Image")
 
 Then we can define:
 
@@ -226,7 +226,7 @@ conda install -c conda-forge opencv
 conda install -c anaconda numpy
 ```
 
-Once installed we have to download the haar cascade itself in XML format, which can be found in the original OpenCV Github repository [https://github.com/opencv/opencv/tree/master/data/haarcascades]. The one we need for face detection is `haarcascade_frontalface_default.xml`.
+Once installed we have to download the haar cascade itself in XML format, which can be found in the original OpenCV Github [repository](https://github.com/opencv/opencv/tree/master/data/haarcascades). The one we need for face detection is `haarcascade_frontalface_default.xml`.
 
 ### 8.2 Face Detection Script
 

@@ -5,7 +5,7 @@ DNN FC uses the ResNet-10 architecture as its backbone and it is part of the Ope
 
 ## Single Shot Multibox Detector
 
-SSD was first prosed by Wei Liu et al. in a paper titled "SSD: Single Shot MultiBox Detector" back in 2016. SSD was described as a method for detecting objects in images using a single deep neural network. The official GitHub repository can be found at [https://github.com/weiliu89/caffe/tree/ssd].
+SSD was first prosed by Wei Liu et al. in a paper titled "SSD: Single Shot MultiBox Detector" back in 2016. SSD was described as a method for detecting objects in images using a single deep neural network. GitHub [Repo](https://github.com/weiliu89/caffe/tree/ssd).
 
 The name of the method itself can be divided in:
 
@@ -25,28 +25,28 @@ Hence we can divide the model in two sections:
 The first section, also called ***base network*** contains layers based on the VGG-16 architecture since it's the best architecture model for high quality image classification.
 
 <p align="center">
-    <img width="470" height="276" src="images\vgg_architecture.png">
+    <img width="470" height="276" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/vgg_architecture.png?raw=true">
 </p>
 
-![alt text](images\dnn_vgg_boxed.png "VGG Architecture")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_vgg_boxed.png?raw=true "VGG Architecture")
 
 The task of the VGG model is to extract feature maps. The convolutional layer represented in the image above (Conv4_3) is used for object detection, and is composed of 38x38 cells and it will output 4 object predictions.
 
 <p align="center">
-    <img width="450" height="474" src="images\dnn_vgg_prediction.png">
+    <img width="450" height="474" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_vgg_prediction.png?raw=true">
 </p>
 
 Each of these prediction is made of a boundary box and scores for each class (we might be training the model on many classes such types of cars) with an additional extra class for "no object". The highest score is set as the bounded object class.
 
 Keep in mind that the VGG-16 architecture will help improve the final results by making use of transfer learning. The only difference SSD takes is that it truncates the VGG-16 classification layers (fully connected layers), and replaces them with a set of auxiliary convolutional layers (from FC6 to the end) in order to extract features at different scales and steadily decrease the size of the input to each subsequent layers.
 
-![alt text](images\ssd_architecture.png "SSD Architecture")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/ssd_architecture.png?raw=true "SSD Architecture")
 
 ### NMS
 
 The last step of the SSD model is the use of a non-maximum suppression in order to reduce the number of bounding boxes.
 
-![alt text](images\dnn_nms.png "SSD Architecture")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_nms.png?raw=true "SSD Architecture")
 
 ## MTCNN Code Implementation
 

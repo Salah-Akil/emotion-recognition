@@ -18,7 +18,7 @@ An ANN is basically a computing system that is composed of a collection of conne
 
 Here's the representation of an artificial neural network:
 
-![alt text](images\ann_color.png "Artificial Neural Network")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/ann_color.png?raw=true "Artificial Neural Network")
 
 As we can see we have three layers:
 
@@ -96,7 +96,7 @@ $$
   sigmoid(x) = \frac{e^x}{e^x\ +\ 1}
 $$
 
-![alt text](images\sigmoid_activation.png "Sigmoid Activation Function")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/sigmoid_activation.png?raw=true "Sigmoid Activation Function")
 
 To better understand the "why" we use an activation function let's take for reference how a biological brain works.
 
@@ -122,7 +122,7 @@ $$
   relu(x) = max(0,x)
 $$
 
-![alt text](images\relu_activation.png "Relu Activation Function")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/relu_activation.png?raw=true "Relu Activation Function")
 
 #### Softmax Activation Function
 
@@ -136,9 +136,9 @@ $$
   Softmax(x_{i}) = \frac{\exp(x_i)}{\sum_j \exp(x_j)}
 $$
 
-![alt text](images\softmax_activation.png "Softmax Activation Function")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/softmax_activation.png?raw=true "Softmax Activation Function")
 
-![alt text](images\softmax.jpg "Softmax Activation")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/softmax.jpg?raw=true "Softmax Activation")
 
 The scores returned by the softmax activation function will add up to 1 since we're dealing with probabilities. The predicted class is hence the item in the list with the highest confidence score.
 
@@ -316,11 +316,11 @@ For example a filter that can detect lines in an image is called *line detector*
 
 In order to understand how kernels (a filter used to extract features from the image) work, we will assume we have a ConvoNet that takes as input images of handwritten numbers and tries to classify them into their respective classes (in this case form 0 to 9).
 
-![alt text](images\mnist.jpg "MNIST Dataset")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist.jpg?raw=true "MNIST Dataset")
 
 In the first hidden convo-layer we will have to specify how the kernel size which will determine the number of output channels. The kernel is nothing but a tensor, a small matrix that we initialize with random values. In the example below we set the `kernel_size=(3,3)`.
 
-![alt text](images\mnist_cnn.png "CNN")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_cnn.png?raw=true "CNN")
 
 The `3x3` pixels kernel block will slide across the  `3x3` input channel pixels, and compute (*dot product*) new pixels for the output channel.
 
@@ -355,21 +355,21 @@ $$
 
 The goal is to slide (*convolving*) across the entire input channel and create an output channel called **feature map**, which indeed will become the input channel for the successive layer in the neural network. Just as shown in the image below.
 
-![alt text](images\convo_feature.jpg "Kernel")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/convo_feature.jpg?raw=true "Kernel")
 
 If we want to have an output channel with the same size as the input channel, we could use zero padding
 
-![alt text](images\zero_padding.jpg "Zero Padding")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/zero_padding.jpg?raw=true "Zero Padding")
 
 Since we are converting the images to grayscale then we have only a single color channel. If we were using RBG then we would use 3 color channels and we would perform the convolving for each channel.
 
-![alt text](images\rgb_feature_map.png "RGB Feature Map")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/rgb_feature_map.png?raw=true "RGB Feature Map")
 
 ### 5.4 Feature (Patter) Detection
 
 In order to understand how the model detects patterns and edges, we will use as input a grayscale image from the MNIST dataset.
 
-![alt text](images\mnist_seven.png "Grayscale Input")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_seven.png?raw=true "Grayscale Input")
 
 By using `3x3` filters for the first convo-layer, we could detect very simple features such as:
 
@@ -384,11 +384,11 @@ To do this we will set the `3x3` filters with 3 types of values:
 - **0** for representing gray
 - **-1** for representing black
 
-![alt text](images\mnist_filters.png "Grayscale Features")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_filters.png?raw=true "Grayscale Features")
 
 By convolving each filter over the input image, we would get the following input channels:
 
-![alt text](images\mnist_output_channels.png "Output Channels")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_output_channels.png?raw=true "Output Channels")
 
 As we can see the respective type of edge (shown with bright white pixels) is detected in each output channel.
 
@@ -405,7 +405,7 @@ In order to understand how max pooling achieves this, let's briefly see how it w
 
 When we use max pooling after each convolutional layer, we reduce the pixel dimension of the final output channel for that layer. After we get the feature map by using the `3x3` kernel from previous example, we will get (in this case) the following result:
 
-![alt text](images\maxp_input.png "26x26 Convolutional Layer Output")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/maxp_input.png?raw=true "26x26 Convolutional Layer Output")
 
 Which has a pixel dimension of `26x26`.
 
@@ -413,11 +413,11 @@ Now for max pooling to work, we define a `pool_size=(2, 2)` which sets a `2x2` p
 
 Now that `pool_size` and `strides` are set, the  `2x2` region will start from the top-left region of the convo-layer output, and calculate the max-value for that region and store it the output channel. We then move by the number of strides set and repeat the max-value operation, until we go over the entire convo-layer output. By the end (by using `pool_size=(2,2)` and `strides=(2,2)`) we will reduce the convo-layer output by a factor of 2, getting an output channel having a dimension of `13x13` pixels.
 
-![alt text](images\maxp_output.png "13x13 Output Channel")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/maxp_output.png?raw=true "13x13 Output Channel")
 
 Another variation is this kind of technique is **average pooling** where the average of the pool is taken instead of the max value.
 
-![alt text](images\maxp_avgp.png "Max Pooling vs Average Pooling")
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/maxp_avgp.png?raw=true "Max Pooling vs Average Pooling")
 
 Now we can finally understand how max pooling helps lowering computational cost, since by reducing the convo-output dimensions the model will look at larger regions of the image going forward, hence reducing the amount of parameters in the model.
 At the same time max pooling helps with overfitting by creating an output channel with the most activated pixels while discarding the pixels with lower activation values.
