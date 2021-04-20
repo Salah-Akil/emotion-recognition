@@ -6,11 +6,11 @@ In 2001 Paul Viola and Michael Jones published a paper called "Rapid Object Dete
 
 Despite being more than 20 years old, this algorithm is still widely used and quite powerful.
 
-## Grayscale vs Colored Images
+## 1. Grayscale vs Colored Images
 
 The Viola-Jones algorithm only works on grayscale images since they contain less data than colored ones. In fact many computer vision task use grayscale images. Let's explain why.
 
-### Grayscale
+### 1.1 Grayscale
 
 A grayscale image just need information about how bright a particular pixel is, basically it's intensity. The higher the value, the greater the intensity. A display normally supports 256 different shades of gray, so for a single grayscale image we just need a single byte to represent each pixel since:
 
@@ -20,7 +20,7 @@ A grayscale image just need information about how bright a particular pixel is, 
 
 So in the memory a grayscale image is represented by a two dimensional array of bytes. The dimensions of this array (called also "channel") are equal to the height and width of the image. So, a grayscale image has only one channel. And this channel represents the intensity of gray.
 
-### Colored Images
+### 1.2 Colored Images
 
 Colored images work differently and require much more data to be stored than a simple grayscale one. We are not dealing anymore with just about what shade, we start dealing with what shade of which "color".
 
@@ -47,13 +47,13 @@ As we can see in the image above, the color (Blue Marine) in the pixel is repres
 - Green &rarr; 133
 - Blue &rarr; 160
 
-## How it works
+## 2. How it works
 
 The Viola-Jones algorithm was designed to detect frontal faces in images, rather than faces looking upwards, downwards or sideways. In fact if we feed as input an image with a face looking sideways to the `face_detection.py` script (we will talk about it later) we will see a decrease in detection accuracy.
 
 What the algorithm does is to outline a box and move it every time a step to the right until it reaches the end and repeat this process for each tile in the picture. The goal is to search for a face features such as eyes, eyebrows, lips or a nose within this box every time it moves, and in order to detect these features we use *Haar-Features*.
 
-## Haar-Features
+## 3. Haar-Features
 
 Haar-Features are named after Haar Wavelets. A haar-wavelet is a sequence of rescaled square-shaped functions (very similar to Fourier-analysis) that were proposed by a hungarian mathematician named Alfred Haar in 1909.
 
@@ -81,7 +81,7 @@ Since we can use them to represent the most relevant features of a face.
     <img width="450" height="474" src="images\face_with_haar_boxes.png">
 </p>
 
-## Algorithm
+## 4. Algorithm
 
 As we explained, a facial features like an eyebrow is composed of a dark part (eyebrow) and a light part (the skin above the eyebrow). In a grayscale image the eyebrow will be represented by darker (high value) pixel and the skin part by lighter (low value) pixels. We know that this pixel values are in the range of 0 to 255, but for simplicity we will represented each pixel with a value from 0.00 to 1.00.
 
@@ -114,7 +114,7 @@ In other words the closer the Δ is to 1 the more likely we have found a haar fe
 
 By repeating this operation with the other haar edge and line features across the entire image we can detect facial features such as the nose, eyes, lips, eyebrows etc.
 
-## Integral Image
+## 5. Integral Image
 
 The process of calculating the average sum of all the pixel values in the haar features (edge and line of different kernel sizes) can be time consuming, for example a single haar feature can be composed of hundreds of pixels itself, while the entire images is composed of ten of thousands of pixels, the time complexity running these operation on the entire image is **O(N<sup>2</sup>)**.
 
@@ -182,13 +182,13 @@ $$ RS(o) = 101 $$
 
 As we can see, instead of considering all the values in the haar feature region (a region might contain hundreds or thousands of pixels) and computing the sum, we just need 4 single pixel values from the integral image to get the same result, achieving *O(1)* running time.
 
-## AdaBoost
+## 6. AdaBoost
 
 On the original paper Jones and Viola proposed 180.000 initial features. Most of these initial features were not suitable or were irrelevant to facial features, so they proposed the use of a *feature selection* technique in order to select only the relevant features needed for face features detection. The decision was to use a boosting technique called AdaBoost. We are not going to dive in how [AdaBoost](https://en.wikipedia.org/wiki/AdaBoost) works since is not relevant to our project.
 What we need to know is that these 180.000 initial features were reduced to only 6.000 essential features needed for face features detection.
 
 
-## Cascade
+## 7. Cascade
 
 Having to run 6.000 features within a 24 by 24 windows on an image is still a time consuming task. To reduce this computational time Viola and Jones proposed the use of another technique named "*Attentional Cascade*", deducing that not all the features need to run on every window. If a particular feature fails on a window then we can deduce that the facial feature is not present, consequently moving to the next window and repeating the process.
 
@@ -206,11 +206,11 @@ These features are applied on the images in stages, with the the initial stages 
 
 These initial stages containing simpler and fewer features eliminate most of the non essential windows which don't contain any facial feature, enabling the detection to run on real-time on modern hardware architecture.
 
-## Haar Code Implementation
+## 8. Haar Code Implementation
 
 Let's now see how we can implement the haar face detection in our code.
 
-### Installation & Dependencies
+### 8.1 Installation & Dependencies
 
 Haar Cascades require OpenCV (for reading the cascade file) and Numpy packages, which can be installed via `pip` command:
 
@@ -228,7 +228,7 @@ conda install -c anaconda numpy
 
 Once installed we have to download the haar cascade itself in XML format, which can be found in the original OpenCV Github repository [https://github.com/opencv/opencv/tree/master/data/haarcascades]. The one we need for face detection is `haarcascade_frontalface_default.xml`.
 
-### Face Detection Script
+### 8.2 Face Detection Script
 
 We are now going to python function that takes two parameters:
 

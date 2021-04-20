@@ -8,13 +8,13 @@ The process MTCNN takes is completely different form the Haar method proposed by
 - Stage 2 -> use of a more complex CNN in order to refine the windows to reject a large number of non-faces windows;
 - Stage 3 -> use of a more powerful CNN to refine the result and output facial landmarks.
 
-## MTCNN Stages
+## 1. MTCNN Stages
 
 All three stages of the MTCNN take as input a pyramid of scaled images of the original image to process.
 
 ![alt text](images\mtcnn_pyramid.png "Pyramid Image Representation")
 
-### Stage 1 (P-Net)
+### 1.1 Stage 1 (P-Net)
 
 The first stage exploits a fully convolutional network called Proposal Network (**P-Net**). The main difference between a convolutional neural network and a fully convolutional one is that the FCN does not make use of a dense layers as part of the architecture.
 
@@ -28,7 +28,7 @@ The first stage will give then as output all the candidate windows after they ar
 
 ![alt text](images\mtcnn_stage_1.png "Stage 1")
 
-### Stage 2 (R-Net)
+### 1.2 Stage 2 (R-Net)
 
 The second stage takes all the candidates and feeds them as input to another CNN, called Refine Network (R-Net), which is used to eliminate even more false candidates. It then performs calibration with bounding box regression and makes use again of NMS to merge overlapped candidates.
 The R-Net used is a true CNN and not a FCN like the one used in the first stage, since it makes use of a dense layers at the last stage of the network architecture.
@@ -43,7 +43,7 @@ As we can see in the image above, R-Net will output:
 
 ![alt text](images\mtcnn_stage_2.png "Stage 2")
 
-### Stage 3 (O-Net)
+### 1.3 Stage 3 (O-Net)
 
 The Output Network is the last stage and is very similar to the second stage, in fact it uses again NMS to further reduce the candidates to only one and 5 facial landmarks for:
 
@@ -59,11 +59,11 @@ The O-Net is composed of 3 convolutional layers having 3x3 filters and 3x3 max-p
 
 ![alt text](images\o_net.jpeg "O-Net")
 
-## MTCNN Code Implementation
+## 2. MTCNN Code Implementation
 
 Let's now see how we can implement MTCNN face detection in our code.
 
-### Installation & Dependencies
+### 2.1 Installation & Dependencies
 
 MTCNN can be installed either via `pip` (we also need to install OpenCV):
 
@@ -79,7 +79,7 @@ conda install -c conda-forge mtcnn
 conda install -c conda-forge opencv
 ```
 
-### Face Detection Script
+### 2.2 Face Detection Script
 
 The python function we are about to code will take in two parameters as input:
 
