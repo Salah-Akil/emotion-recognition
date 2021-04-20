@@ -71,7 +71,7 @@ The following headings contain the all the needed knowledge to reproduce this re
 
 <details>
   <summary>Click to expand</summary>
-  
+
   #### [1. Grayscale vs Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale-vs-colored-images)
   ##### [1.1 Grayscale](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale)
   ##### [1.2 Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#colored-images)
@@ -84,6 +84,56 @@ The following headings contain the all the needed knowledge to reproduce this re
   #### [8. Haar Code Implementation](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#haar-code-implementation)
   ##### [8.1 Installation & Dependencies](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#installation--dependencies)
   ##### [8.2 Face Detection Script](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#face-detection-script)
+
+  
+</details>
+
+### III. [MTCNN](hhttps://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#mtcnn)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. MTCNN Stages](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#1-mtcnn-stages)
+  ##### [1.1 Stage 1 (P-Net)](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#11-stage-1-p-net)
+  ##### [1.2 Stage 2 (R-Net)](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#12-stage-2-r-net)
+  ##### [1.3 Stage 3 (O-Net)](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#13-stage-3-o-net)
+  #### [2. MTCNN Code Implementation](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#2-mtcnn-code-implementation)
+  ##### [2.1 Installation & Dependencies](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#21-installation--dependencies)
+  ##### [2.2 Face Detection Script](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#22-face-detection-script)
+
+  
+</details>
+
+### IV. [DNN Face Detector in OpenCV](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#dnn-face-detector-in-opencv)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. Single Shot Multibox Detector](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#single-shot-multibox-detector)
+  ##### [1.1 Model](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#model)
+  ##### [1.2 NMS](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#nms)
+  ##### [1.3 Stage 3 (O-Net)](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#13-stage-3-o-net)
+  #### [2. DNN Code Implementation](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#dnn-code-implementation)
+  ##### [2.1 Installation & Dependencies](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#installation--dependencies)
+  ##### [2.2 Face Detection Script](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/dnn_face_detection.md#face-detection-script)
+
+  
+</details>
+
+### V. [Face Detection Models Comparison](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#face-detection-models-comparison)
+
+<details>
+  <summary>Click to expand</summary>
+  
+  #### [1. Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#1-dataset)
+  ##### [1.1 Hypothesis](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#11-hypothesis)
+  #### [2. Comparison](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#2-comparison)
+  ##### [2.1 Code](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#22-code)
+  #### [3. Results](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#3-results)
+  ##### [3.1 HAAR](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#31-haar)
+  ##### [3.2 MTCNN](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#32-mtcnn)
+  ##### [3.3 DNN](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#33-dnn)
+  ##### [3.4 Conclusion](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/fd_models_comparison.md#34-conclusion)
 
   
 </details>
