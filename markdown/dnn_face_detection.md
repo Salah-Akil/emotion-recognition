@@ -3,7 +3,7 @@
 DNN (Deep Neural Network) Face Detector is a Caffe model based on the Single Shot Multibox Detector (SSD).
 DNN FC uses the ResNet-10 architecture as its backbone and it is part of the OpenCV deep neural network module (there is also a Tensorflow version).
 
-## Single Shot Multibox Detector
+## 1. Single Shot Multibox Detector
 
 SSD was first prosed by Wei Liu et al. in a paper titled "SSD: Single Shot MultiBox Detector" back in 2016. SSD was described as a method for detecting objects in images using a single deep neural network. GitHub [Repo](https://github.com/weiliu89/caffe/tree/ssd).
 
@@ -13,7 +13,7 @@ The name of the method itself can be divided in:
 - **MultiBox** &rarr; is the name of the technique used for the task of bounding box regression;
 - **Detector** &rarr; meaning the model will detect and classify objects (such as faces).
 
-### Model
+### 1.1 Model
 
 The Single Shot Multibox Detector model is based on a feed-forward CNN which creates a fixed-size collection of bounding boxes and score values for representing the presence of object class instances. This is followed by a NMS (Non-Maximum Suppression) in order to merge highly overlapped instances and produce the final detection.
 
@@ -48,7 +48,7 @@ Keep in mind that the VGG-16 architecture will help improve the final results by
 </p>
 
 
-### NMS
+### 1.2 NMS
 
 The last step of the SSD model is the use of a non-maximum suppression in order to reduce the number of bounding boxes.
 
@@ -57,11 +57,11 @@ The last step of the SSD model is the use of a non-maximum suppression in order 
 </p>
 
 
-## DNN Code Implementation
+## 2. DNN Code Implementation
 
 Let's now see how we can implement DNN Face Detector in our code.
 
-### Installation & Dependencies
+### 2.1 Installation & Dependencies
 
 DNN-Caffee need OpenCV in order to run which we can install with `pip`:
 
@@ -80,7 +80,7 @@ We also need the DNN models (Available in the GitHub repo for this project):
 - ***.caffemodel*** &rarr; contain the weights for the actual layers
 - ***.protox*** &rarr; defines the model architecture (basically the layers)
 
-### Face Detection Script
+### 2. 2Face Detection Script
 
 The python function we are about to code will take in two parameters as input:
 
