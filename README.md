@@ -14,7 +14,7 @@ Emotion recognition is one of the harderst computer vision tasks to perform corr
 
 My goal was to achieve at least `+50% accuracy` on a total of 7 emotion classes, which is better than pure chance standing at `14.28%`. Once the model is created and achieves the desired accuracy it can be deployed for real-life applications.
 
-After 32 iterations on different models created (on 2 different datasets), I picked the model with the highest classification accuracy, which was tested on 2867 images and got a global emotion average accuracy of 59%.
+After 32 iterations on different models created (on 2 different datasets), I picked the model with the highest classification accuracy, which was tested on 2867 images and got a global emotion average accuracy of `59%`.
 
 ![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/best_model_kaggle_v12_cmatrix.png?raw=true)
 
