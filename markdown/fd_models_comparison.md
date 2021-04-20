@@ -72,9 +72,8 @@ The results of all the 70 images in the dataset can be found in the GitHub repos
 
 Let's quickly see how the haar detector performed and how different values for the `scale_factor` impact detection precision.
 
-
-<center>1.05</center> | <center>1.10</center> | <center>1.20</center>
-- | - | -
+1.05 | 1.10 | 1.20
+:-------------------------:|:-------------------------:|:-------------------:
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_haar_scale_factor_1.05.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_haar_scale_factor_1.1.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_haar_scale_factor_1.2.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_haar_scale_factor_1.05.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_haar_scale_factor_1.1.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_haar_scale_factor_1.2.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_haar_scale_factor_1.05.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_haar_scale_factor_1.1.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_haar_scale_factor_1.2.jpg?raw=true)
@@ -108,8 +107,8 @@ We can also deduce that the best `scale_factor` to use is `1.05` since it offers
 
 For MTCNN we didn't set any threshold to the minimum confidence before declaring a bounding box, everything was left to the default values.
 
-<center>Default Values</center> |
-- |
+Default Values |
+:-------------------------:|
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_mtcnn_landmarks_false.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_mtcnn_landmarks_false.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_mtcnn_landmarks_false.jpg?raw=true)
@@ -144,8 +143,8 @@ So for now between HAAR and MTCNN, the latter is clearly more precise than the f
 The DNN detector was set with different `min_confidence_score` values, let's see how it performed:
 
 
-<center>0.2</center> | <center>0.4</center> | <center>0.6</center>
-- | - | -
+0.2 | 0.4 | 0.6
+:-------------------------:|:-------------------------:|:-------------------:
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_dnn_min_confidence_score_0.2.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_dnn_min_confidence_score_0.4.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_01_dnn_min_confidence_score_0.6.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_dnn_min_confidence_score_0.2.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_dnn_min_confidence_score_0.4.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_02_dnn_min_confidence_score_0.6.jpg?raw=true)
 ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_dnn_min_confidence_score_0.2.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_dnn_min_confidence_score_0.4.jpg?raw=true) | ![alt](https://github.com/Salah-Akil/emotion-recognition/blob/main/face-detection-comparison-images/photo_04_dnn_min_confidence_score_0.6.jpg?raw=true)
