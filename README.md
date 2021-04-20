@@ -8,7 +8,7 @@ The initial idea was to create a software capable of detecting faces in images o
 
 Emotion recognition is one of the harderst computer vision tasks to perform correctly, a 2020 [study](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231968#:~:text=The%20human%20recognition%20accuracy%20of,from%2048%25%20to%2062%25.) tested eight commercial classifiers, and compared their emotion recognition performance to that of human observers, revealing recognition advantage for human observers over automatic classification. Among the eight classifiers, there was considerable variance in recognition accuracy ranging from `48%` to `62%`.
 
-[emotion_comparison_test image]
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/emotion_performance_study.png?raw=true)
 
 So my goal was to achieve at least `+50% accuracy` on a total of 7 emotion classes, which is better than pure chance standing at `14.28%`. Once the model is created and achieves the desired accuracy it can be deployed for real-life applications.
 
