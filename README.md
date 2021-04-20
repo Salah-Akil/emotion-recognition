@@ -24,7 +24,7 @@ The following headings contain the all the needed knowledge to reproduce this re
 
 ## Index
 
-### A. [Deep Learning](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/deep_learning.md#deep-learning)
+### I. [Deep Learning](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/deep_learning.md#deep-learning)
 
 <details>
   <summary>Click to expand</summary>
