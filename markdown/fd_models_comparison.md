@@ -22,7 +22,7 @@ I think that maybe some models will have problems detecting people with very dar
 
 We will code a simple script to take one image as input and maybe additional values such as accuracy threshold, and pass them to the "face detection" functions that we already created for each model.
 
-### 2.2 Code
+### 2.1 Code
 
 ```python
 import face_detection_models as fm
