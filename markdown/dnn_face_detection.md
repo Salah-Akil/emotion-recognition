@@ -80,7 +80,7 @@ We also need the DNN models (Available in the GitHub repo for this project):
 - ***.caffemodel*** &rarr; contain the weights for the actual layers
 - ***.protox*** &rarr; defines the model architecture (basically the layers)
 
-### 2. 2Face Detection Script
+### 2.2 Face Detection Script
 
 The python function we are about to code will take in two parameters as input:
 
