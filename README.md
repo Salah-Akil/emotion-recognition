@@ -148,12 +148,19 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### VII. [Datasets](https://github.com/Salah-Akil/emotion-recognition/)
+### VII. [Datasets](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#datasets)
 
 <details>
   <summary>Click to expand</summary>
   
-  #### [1. To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+  #### [1. Extended Cohn-Kanade (CK+)](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#1-extended-cohn-kanade-ck)
+  ##### [1.1 Emotions](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#11-emotions)
+  ##### [1.2 Dataset Size](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#12-dataset-size)
+  ##### [1.3 Dataset Quality](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#13-dataset-quality)
+  #### [2. Kaggle Face Expression Recognition Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#2-kaggle-face-expression-recognition-dataset)
+  ##### [2.1 Emotions](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#21-emotions)
+  ##### [2.2 Dataset Size](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#22-dataset-size)
+  ##### [2.3 Dataset Quality](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/datasets.md#33-dataset-quality)
 
   
 </details>
