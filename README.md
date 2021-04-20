@@ -72,9 +72,9 @@ The following headings contain the all the needed knowledge to reproduce this re
 <details>
   <summary>Click to expand</summary>
   
-  #### 1. [Grayscale vs Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale-vs-colored-images)
-  ##### 1.1 [Grayscale](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale)
-  ##### 1.2 [Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#colored-images)
+  #### [1. Grayscale vs Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale-vs-colored-images)
+  ##### [1.1 Grayscale](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#grayscale)
+  ##### [1.2 Colored Images](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#colored-images)
   #### [2. How it works](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#how-it-works)
   #### [3. Haar-Features](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#haar-features)
   #### [4. Algorithm](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/haar_face_detection.md#algorithm)
