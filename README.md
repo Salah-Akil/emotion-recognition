@@ -138,7 +138,7 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### VI. [Facial Emotions](https://github.com/Salah-Akil/emotion-recognition/)
+### VI. [Facial Expressions](https://github.com/Salah-Akil/emotion-recognition/)
 
 <details>
   <summary>Click to expand</summary>
