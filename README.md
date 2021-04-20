@@ -88,7 +88,7 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### III. [MTCNN](hhttps://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#mtcnn)
+### III. [MTCNN](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/mtcnn_face_detection.md#mtcnn)
 
 <details>
   <summary>Click to expand</summary>
