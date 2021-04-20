@@ -20,7 +20,7 @@ After 32 iterations on different models created (on 2 different datasets), I pic
   <img width="461" height="390" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/best_model_kaggle_v12_cmatrix.png?raw=true">
 </p>
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/my_model_results.png?raw=true)
+![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/my_model_result.png?raw=true)
 
 The following headings contain the all the needed knowledge to reproduce this results, form the theory about deep learning, how face detection works, required software and hardware, to how I created the models and results achieved.
 
