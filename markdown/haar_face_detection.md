@@ -184,10 +184,9 @@ As we can see, instead of considering all the values in the haar feature region 
 
 ## AdaBoost
 
-On the original paper Jones and Viola proposed 180.000 initial features. Most of these initial features were not suitable or were irrelevant to facial features, so they proposed the use of a *feature selection* technique in order to select only the relevant features needed for face features detection. The decision was to use a boosting technique called AdaBoost. We are not going to dive in how AdaBoost [https://en.wikipedia.org/wiki/AdaBoost] works since is not relevant to our project.
+On the original paper Jones and Viola proposed 180.000 initial features. Most of these initial features were not suitable or were irrelevant to facial features, so they proposed the use of a *feature selection* technique in order to select only the relevant features needed for face features detection. The decision was to use a boosting technique called AdaBoost. We are not going to dive in how [AdaBoost](https://en.wikipedia.org/wiki/AdaBoost) works since is not relevant to our project.
 What we need to know is that these 180.000 initial features were reduced to only 6.000 essential features needed for face features detection.
 
-{***If you want you can explain how AdaBoost works, but I don't think it essential***}
 
 ## Cascade
 
@@ -204,7 +203,6 @@ These features are applied on the images in stages, with the the initial stages 
 |       5      |         50         |
 |      ...     |         ...        |
 
-{***Maybe add gif or pics on how these stages run on an image so it's easier to understand***}
 
 These initial stages containing simpler and fewer features eliminate most of the non essential windows which don't contain any facial feature, enabling the detection to run on real-time on modern hardware architecture.
 
