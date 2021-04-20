@@ -57,7 +57,7 @@ The last step of the SSD model is the use of a non-maximum suppression in order 
 </p>
 
 
-## MTCNN Code Implementation
+## DNN Code Implementation
 
 Let's now see how we can implement DNN Face Detector in our code.
 
