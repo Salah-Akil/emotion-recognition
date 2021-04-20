@@ -18,9 +18,8 @@ The following headings contain the all the needed knowledge to reproduce this re
 
 ### [Deep Learning](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/deep_learning.md#deep-learning)
 
-# A collapsible section with markdown
 <details>
-  <summary>Click to expand!</summary>
+  <summary>### [Deep Learning](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/deep_learning.md#deep-learning)</summary>
   
   ## Heading
   1. [Introduction](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/deep_learning.md#1-introduction)
