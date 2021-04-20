@@ -68,11 +68,15 @@ Assumptions:
 
 The function *f* is said to be a linear function if and only if:
 
-<img src="https://render.githubusercontent.com/render/math?math=f(a+b) = f(a) + f(b)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=f(a+b) = f(a) + f(b)">
+</p>
 
 and
 
-<img src="https://render.githubusercontent.com/render/math?math=f(xa) = xf(a)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=f(xa) = xf(a)">
+</p>
 
 The problem with using linear functions in deep neural networks is that the composition of two linear functions is also a linear function, meaning that in every DNN if we have only linear transformations on the data during a forward pass, then the learned mapping in our network from input to output would also be linear. But normally the types of mappings that we are trying to learn with our DNN are much more complex than simple linear mappings.
 
@@ -94,7 +98,10 @@ Sigmoid takes in an input and does the following:
 
 So 0 is the lower bound limit and 1 is the upper bound limit.
 
-<img src="https://render.githubusercontent.com/render/math?math=sigmoid(x) = \frac{e^x}{e^x\ +\ 1}">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=sigmoid(x) = \frac{e^x}{e^x\ +\ 1}">
+</p>
+
 
 <p align="center">
   <img height="560" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/sigmoid_activation.png?raw=true">
@@ -120,7 +127,9 @@ Which means that each output from the neurons in a layer will be equal to the Si
 
 Sometimes we want the function to not transform the input to be a number strictly between 0 and 1. For example we want to make sure that the more positive a neuron is the more activated it is, so a better activation function for this type of transformation is ReLU which stands for *rectified linear unit*. ReLU transforms the input to the maximum of either 0 or the input itself.
 
-<img src="https://render.githubusercontent.com/render/math?math=relu(x) = max(0,x)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=relu(x) = max(0,x)">
+</p>
 
 <p align="center">
   <img height="560" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/relu_activation.png?raw=true">
@@ -134,7 +143,9 @@ When it comes to the output layer we need a function that takes any values and t
 
 Softmax is great for classification problems (such as classifying facial emotion expression), especially if we're dealing with multi-class classification, since it will report back the "confidence score" for each single class.
 
-<img src="https://render.githubusercontent.com/render/math?math=Softmax(x_{i}) = \frac{\exp(x_i)}{\sum_j \exp(x_j)}">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=Softmax(x_{i}) = \frac{\exp(x_i)}{\sum_j \exp(x_j)}">
+</p>
 
 <p align="center">
   <img height="560" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/softmax_activation.png?raw=true">
@@ -189,11 +200,15 @@ There are different types of loss functions, such as *mean squared error* (MSE),
 
 In order to calculate the mean square error for a single input we simply square the computed error of this input:
 
-<img src="https://render.githubusercontent.com/render/math?math=MSE(input) = (error(input))^2">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=MSE(input) = (error(input))^2">
+</p>
 
 But in order to calculate the MSE of a batch of inputs we have to take the average of the sum of all the squared errors:
 
-<img src="https://render.githubusercontent.com/render/math?math=MSE(batch) = \frac{1}{N}\sum_{i=1}^{N} (error(i))^2">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=MSE(batch) = \frac{1}{N}\sum_{i=1}^{N} (error(i))^2">
+</p>
 
 During the training, if we feed the training dataset to the model in batches, such as that `bacth_size=50` then the MSE must be calculated at then end of each batch training.
 
@@ -323,7 +338,9 @@ In order to understand how kernels (a filter used to extract features from the i
 
 In the first hidden convo-layer we will have to specify how the kernel size which will determine the number of output channels. The kernel is nothing but a tensor, a small matrix that we initialize with random values. In the example below we set the `kernel_size=(3,3)`.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_cnn.png?raw=true "CNN")
+<p align="center">
+  <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mnist_cnn.png?raw=true">
+</p>
 
 The `3x3` pixels kernel block will slide across the  `3x3` input channel pixels, and compute (*dot product*) new pixels for the output channel.
 
@@ -341,7 +358,9 @@ Such as:
 
 Then the dot product (basically the sum of the pairwise products) is:
 
-<img src="https://render.githubusercontent.com/render/math?math=i_{1,1}k_{1,1}+i_{1,2}k_{1,2}+i_{1,3}k_{1,3} + ... + i_{3,3}k_{3,3}">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=i_{1,1}k_{1,1}+i_{1,2}k_{1,2}+i_{1,3}k_{1,3} + ... + i_{3,3}k_{3,3}">
+</p>
 
 The goal is to slide (*convolving*) across the entire input channel and create an output channel called **feature map**, which indeed will become the input channel for the successive layer in the neural network. Just as shown in the image below.
 

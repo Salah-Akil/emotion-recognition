@@ -16,7 +16,10 @@ A grayscale image just need information about how bright a particular pixel is, 
 
 1 Byte = 8 bits &rarr; 256 possible values
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_grayscale.png?raw=true "Grayscale Image Representation")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_grayscale.png?raw=true">
+</p>
+
 
 So in the memory a grayscale image is represented by a two dimensional array of bytes. The dimensions of this array (called also "channel") are equal to the height and width of the image. So, a grayscale image has only one channel. And this channel represents the intensity of gray.
 
@@ -30,15 +33,15 @@ A normal JPEG image supports more than 16 million different colors. In order to 
 
 Since an 8-bit image allows us 256 shaded of grey per channel, for a 24-bit we can use 3 channels (R,G,B).
 
-<!-- ![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/colorspace_example.png?raw=true "RGB") -->
-
 <p align="center">
   <img width="330" height="240" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/colorspace_example.png?raw=true">
 </p>
 
 We use red, green and blue since being the primary colors can be mixed together to form any other color. In fact have 256 different shades of red, green and blue (we have seen that 1 byte can store a value from 0 to 255). So by mixing these colors in different proportions, we get the desired color.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_rgb.png?raw=true "RGB Image Representation")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/camerino_rgb.png?raw=true">
+</p>
 
 
 As we can see in the image above, the color (Blue Marine) in the pixel is represented by an RGB with values set to:
@@ -61,7 +64,9 @@ Haar-Features are named after Haar Wavelets. A haar-wavelet is a sequence of res
 
 The haar features proposed by Viola and Jones are boxes composed of a light (white) part and a dark (black) side, and thanks to this contrast it's possible to determine we have found a face feature or not. This is because if we take a grayscale scale image of a face, some part will be darker than other part in the face, for example the eyebrows, lips or eyes are darker than the forehead or cheeks. Sometimes the middle section may be lighter than the adjacent boxes, in which case it can be interpreted as a nose.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/grayscale_eyebrow_forehead.png?raw=true "Grayscale Eyebrow Feature")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/grayscale_eyebrow_forehead.png?raw=true">
+</p>
 
 For example in the image above we can see that the eyebrow section is darker than the forehead, making the eyebrow a facial feature that we can detect with a haar feature.
 
@@ -73,7 +78,10 @@ The Viola-Jones paper identifies 3 types of Haar features:
 
 But the ones needed for face detection are the **edge features** and **line features**.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_features.png?raw=true "Haar Features")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_features.png?raw=true">
+</p>
+
 
 Since we can use them to represent the most relevant features of a face.
 
@@ -99,7 +107,9 @@ But the facial features detected in a grayscale image will have more realistic v
 
 For both the ideal and real features we have to calculate the delta Δ, which represents the difference between the average sum of all pixel values of the bottom darker zone and upper lighter zone (always darker zone - lighter zone).
 
-<img src="https://render.githubusercontent.com/render/math?math=Δ = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=Δ = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)">
+</p>
 
 *I(x)* &rarr; Pixel intensity of a given pixel x.
 
@@ -116,8 +126,10 @@ By repeating this operation with the other haar edge and line features across th
 
 The process of calculating the average sum of all the pixel values in the haar features (edge and line of different kernel sizes) can be time consuming, for example a single haar feature can be composed of hundreds of pixels itself, while the entire images is composed of ten of thousands of pixels, the time complexity running these operation on the entire image is **O(N<sup>2</sup>)**.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_different_kernel_size.png?raw=true "Haar feature with different kernel sizes")
-(***Put image of haar feature with different kernel sizes***)
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/haar_different_kernel_size.png?raw=true">
+</p>
+
 
 To solve this problem, we can use *Integral Image* approach to achieve **O(1)** running time.
 Integral Image is one of the most important tools used to accelerate features computation in many object detection applications. They are also known as Summed Area Tables and they were proposed in 1984 by Frank Crow.
@@ -128,31 +140,46 @@ Integral Image is one of the most important tools used to accelerate features co
 
 In order to achieve this we convert our original image into an integral image, where a given pixel *(x,y)* in the integral image is the sum of all the pixels to the left and above of the pixel *(x,y)*, including *i(x,y)*, according to equation (1), where *i(x,y)* is the value of the pixel at the position *(x,y)*.
 
-<img src="https://render.githubusercontent.com/render/math?math=II (x,y) = \sum_{x' \leq x,y' \leq y} i(x',y')">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x,y) = \sum_{x' \leq x,y' \leq y} i(x',y')">
+</p>
 
 For example in the images below we can see that the highlighted pixel in the integral image is the sum of all the highlighted pixels in the original image.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_14.png?raw=true "Integral Image")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_14.png?raw=true">
+</p>
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_161.png?raw=true "Integral Image")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_161.png?raw=true">
+</p>
 
 We can also use recursion to calculate the computation of integral image *II(x,y)* as we can observe in the following equation (2):
 
-<img src="https://render.githubusercontent.com/render/math?math=II (x,y) = i(x,y) - II(x-1,y-1) + II(x,y-1) + II(x-1,y)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x,y) = i(x,y) - II(x-1,y-1) + II(x,y-1) + II(x-1,y)">
+</p>
 
 Were *i(x,y)* is the pixel value in the original image.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_recursion.png?raw=true "Integral Image")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/integral_image_recursion.png?raw=true">
+</p>
 
 For example the the pixel (x2,y1) in the integral image above can be calculated as:
 
-* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x2-1,y1-1) + II(x2,y1-1) + II(x2-1,y1)">
-
-* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x1,y0) + II(x2,y0) + II(x1,y1)">
-
-* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 4 - 2 + 5 + 7">
-
-* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 14">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x2-1,y1-1) + II(x2,y1-1) + II(x2-1,y1)">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x1,y0) + II(x2,y0) + II(x1,y1)">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 4 - 2 + 5 + 7">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 14">
+</p>
 
 Let's assume now we have to calculate the sum of the pixel intesity of a particular region in the original image, instead of calculating the all the pixels (which has a running time of O(N<sup>2</sup>)), we can simply manipulate the values in the integral image and get the same result.
 
@@ -164,18 +191,30 @@ Assuming we declare:
 - BL(x,y) as the bottom-left pixel of the same region but in the integral image
 - BR(x,y) as the bottom-right pixel of the same region but in the integral image
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/region_sum.png?raw=true "Integral Image")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/region_sum.png?raw=true">
+</p>
 
 Then we can define:
 
-<img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x,y) - TR(x,y-1) + TL(x-1,y-1) - BL(x-1,y)">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x,y) - TR(x,y-1) + TL(x-1,y-1) - BL(x-1,y)">
+</p>
 
 Which we can use to calculate the sum of all the pixels in the original image above as:
 
-* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y2-1) + TL(x3-1,y2-1) - BL(x3-1,y6)">
-* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y1) + TL(x2,y1) - BL(x2,y6)">
-* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 207 - 33 + 14 - 87">
-* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 101">
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y2-1) + TL(x3-1,y2-1) - BL(x3-1,y6)">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y1) + TL(x2,y1) - BL(x2,y6)">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 207 - 33 + 14 - 87">
+</p>
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 101">
+</p>
 
 As we can see, instead of considering all the values in the haar feature region (a region might contain hundreds or thousands of pixels) and computing the sum, we just need 4 single pixel values from the integral image to get the same result, achieving *O(1)* running time.
 

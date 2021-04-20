@@ -12,7 +12,9 @@ The process MTCNN takes is completely different form the Haar method proposed by
 
 All three stages of the MTCNN take as input a pyramid of scaled images of the original image to process.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_pyramid.png?raw=true "Pyramid Image Representation")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_pyramid.png?raw=true">
+</p>
 
 ### 1.1 Stage 1 (P-Net)
 
@@ -22,18 +24,24 @@ The P-Net takes as input.
 
 The P-Net is used to calculate the candidate windows and their bounding box regression vectors. Bounding box regression is a mainstream technique to refine or predict localization boxes. Usually bounding box regressors are trained to regress from either region proposals or fixed anchor boxes to nearby bounding boxes of a pre-defined target object classes. Once this estimated bounding boxes are calculated they are then used to calibrate the candidate windows. After doing this, a non-maximum suppression (NSM) is used to merge highly overlapped candidates.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/p_net.jpeg?raw=true "P-Net")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/p_net.jpeg?raw=true">
+</p>
 
 The first stage will give then as output all the candidate windows after they are refined in order to downsize the number of candidates.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_1.png?raw=true "Stage 1")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_1.png?raw=true">
+</p>
 
 ### 1.2 Stage 2 (R-Net)
 
 The second stage takes all the candidates and feeds them as input to another CNN, called Refine Network (R-Net), which is used to eliminate even more false candidates. It then performs calibration with bounding box regression and makes use again of NMS to merge overlapped candidates.
 The R-Net used is a true CNN and not a FCN like the one used in the first stage, since it makes use of a dense layers at the last stage of the network architecture.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/r_net.jpeg?raw=true "R-Net")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/r_net.jpeg?raw=true">
+</p>
 
 As we can see in the image above, R-Net will output:
 
@@ -41,7 +49,9 @@ As we can see in the image above, R-Net will output:
 - a 4 element vector (which makes up the bounding box for the face);
 - and a 10 element vector (which contains facial landmarks localization).
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_2.png?raw=true "Stage 2")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_2.png?raw=true">
+</p>
 
 ### 1.3 Stage 3 (O-Net)
 
@@ -53,11 +63,15 @@ The Output Network is the last stage and is very similar to the second stage, in
 - Left Mouth Corner
 - Right Mouth Corner
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_3.png?raw=true "Stage 3")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/mtcnn_stage_3.png?raw=true">
+</p>
 
 The O-Net is composed of 3 convolutional layers having 3x3 filters and 3x3 max-pooling. At the end of the network we have a simple 2x2 filter convolutional layer and a fully connected layer.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/o_net.jpeg?raw=true "O-Net")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/o_net.jpeg?raw=true">
+</p>
 
 ## 2. MTCNN Code Implementation
 

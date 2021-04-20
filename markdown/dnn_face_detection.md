@@ -28,7 +28,10 @@ The first section, also called ***base network*** contains layers based on the V
     <img width="470" height="276" src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/vgg_architecture.png?raw=true">
 </p>
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_vgg_boxed.png?raw=true "VGG Architecture")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_vgg_boxed.png?raw=true">
+</p>
+
 
 The task of the VGG model is to extract feature maps. The convolutional layer represented in the image above (Conv4_3) is used for object detection, and is composed of 38x38 cells and it will output 4 object predictions.
 
@@ -40,13 +43,19 @@ Each of these prediction is made of a boundary box and scores for each class (we
 
 Keep in mind that the VGG-16 architecture will help improve the final results by making use of transfer learning. The only difference SSD takes is that it truncates the VGG-16 classification layers (fully connected layers), and replaces them with a set of auxiliary convolutional layers (from FC6 to the end) in order to extract features at different scales and steadily decrease the size of the input to each subsequent layers.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/ssd_architecture.png?raw=true "SSD Architecture")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/ssd_architecture.png?raw=true">
+</p>
+
 
 ### NMS
 
 The last step of the SSD model is the use of a non-maximum suppression in order to reduce the number of bounding boxes.
 
-![alt text](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_nms.png?raw=true "SSD Architecture")
+<p align="center">
+    <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/dnn_nms.png?raw=true">
+</p>
+
 
 ## MTCNN Code Implementation
 
