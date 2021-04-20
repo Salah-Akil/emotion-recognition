@@ -99,9 +99,7 @@ But the facial features detected in a grayscale image will have more realistic v
 
 For both the ideal and real features we have to calculate the delta Δ, which represents the difference between the average sum of all pixel values of the bottom darker zone and upper lighter zone (always darker zone - lighter zone).
 
-$$
-Δ = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)
-$$
+<img src="https://render.githubusercontent.com/render/math?math=Δ = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)">
 
 *I(x)* &rarr; Pixel intensity of a given pixel x.
 
@@ -130,9 +128,7 @@ Integral Image is one of the most important tools used to accelerate features co
 
 In order to achieve this we convert our original image into an integral image, where a given pixel *(x,y)* in the integral image is the sum of all the pixels to the left and above of the pixel *(x,y)*, including *i(x,y)*, according to equation (1), where *i(x,y)* is the value of the pixel at the position *(x,y)*.
 
-$$
-II (x,y) = \sum_{x' \leq x,y' \leq y} i(x',y'
-$$
+<img src="https://render.githubusercontent.com/render/math?math=II (x,y) = \sum_{x' \leq x,y' \leq y} i(x',y')">
 
 For example in the images below we can see that the highlighted pixel in the integral image is the sum of all the highlighted pixels in the original image.
 
@@ -142,9 +138,7 @@ For example in the images below we can see that the highlighted pixel in the int
 
 We can also use recursion to calculate the computation of integral image *II(x,y)* as we can observe in the following equation (2):
 
-$$
-II (x,y) = i(x,y) - II(x-1,y-1) + II(x,y-1) + II(x-1,y)
-$$
+<img src="https://render.githubusercontent.com/render/math?math=II (x,y) = i(x,y) - II(x-1,y-1) + II(x,y-1) + II(x-1,y)">
 
 Were *i(x,y)* is the pixel value in the original image.
 
@@ -152,10 +146,13 @@ Were *i(x,y)* is the pixel value in the original image.
 
 For example the the pixel (x2,y1) in the integral image above can be calculated as:
 
-$$II (x2,y1) = i(x2,y1) - II(x2-1,y1-1) + II(x2,y1-1) + II(x2-1,y1)$$
-$$II (x2,y1) = i(x2,y1) - II(x1,y0) + II(x2,y0) + II(x1,y1)$$
-$$II (x2,y1) = 4 - 2 + 5 + 7$$
-$$II (x2,y1) = 14$$
+* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x2-1,y1-1) + II(x2,y1-1) + II(x2-1,y1)">
+
+* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = i(x2,y1) - II(x1,y0) + II(x2,y0) + II(x1,y1)">
+
+* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 4 - 2 + 5 + 7">
+
+* <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 14">
 
 Let's assume now we have to calculate the sum of the pixel intesity of a particular region in the original image, instead of calculating the all the pixels (which has a running time of O(N<sup>2</sup>)), we can simply manipulate the values in the integral image and get the same result.
 
@@ -171,14 +168,14 @@ Assuming we declare:
 
 Then we can define:
 
-$$ RS(o) = BR(x,y) - TR(x,y-1) + TL(x-1,y-1) - BL(x-1,y) $$
+<img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x,y) - TR(x,y-1) + TL(x-1,y-1) - BL(x-1,y)">
 
 Which we can use to calculate the sum of all the pixels in the original image above as:
 
-$$ RS(o) = BR(x5,y6) - TR(x5,y2-1) + TL(x3-1,y2-1) - BL(x3-1,y6) $$
-$$ RS(o) = BR(x5,y6) - TR(x5,y1) + TL(x2,y1) - BL(x2,y6) $$
-$$ RS(o) = 207 - 33 + 14 - 87 $$
-$$ RS(o) = 101 $$
+* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y2-1) + TL(x3-1,y2-1) - BL(x3-1,y6)">
+* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = BR(x5,y6) - TR(x5,y1) + TL(x2,y1) - BL(x2,y6)">
+* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 207 - 33 + 14 - 87">
+* <img src="https://render.githubusercontent.com/render/math?math=RS(o) = 101">
 
 As we can see, instead of considering all the values in the haar feature region (a region might contain hundreds or thousands of pixels) and computing the sum, we just need 4 single pixel values from the integral image to get the same result, achieving *O(1)* running time.
 
