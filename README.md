@@ -251,15 +251,15 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### X. [Requirements](https://github.com/Salah-Akil/emotion-recognition/)
+### X. [Requirements](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/requirements.md#requirements)
 
-<details>
+<!-- <details>
   <summary>Click to expand</summary>
   
   #### 1. [To-Add](https://github.com/Salah-Akil/emotion-recognition/)
 
   
-</details>
+</details> -->
 
 ### XI. [Hardware](https://github.com/Salah-Akil/emotion-recognition/)
 
