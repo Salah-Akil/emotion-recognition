@@ -208,7 +208,7 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### IX. [Results](https://github.com/Salah-Akil/emotion-recognition/)
+### IX. [Results](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_results.md#neural-networks-results)
 
 <details>
   <summary>Click to expand</summary>
