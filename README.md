@@ -165,13 +165,45 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### VIII. [Neural Networks Development](https://github.com/Salah-Akil/emotion-recognition/)
+### VIII. [Neural Networks Development](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#neural-networks-development)
 
 <details>
   <summary>Click to expand</summary>
   
-  #### [1. To-Add CK+](https://github.com/Salah-Akil/emotion-recognition/)
-  #### [2. To-Add Kaggle](https://github.com/Salah-Akil/emotion-recognition/)
+  #### [1. Neural Networks with CK+ Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-ck-dataset)
+  ##### [1.1 gen-01](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v1.ipynb)
+  ##### [1.2 gen-02](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v2.ipynb)
+  ##### [1.3 gen-03](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v3.ipynb)
+  ##### [1.4 gen-04](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v4.ipynb)
+  ##### [1.5 gen-05](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v5.ipynb)
+  ##### [1.6 gen-06](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v6.ipynb)
+  ##### [1.7 gen-07](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v7.ipynb)
+  ##### [1.8 gen-08](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v8.ipynb)
+  ##### [1.9 gen-09](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v9.ipynb)
+  ##### [1.10 gen-10](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v10.ipynb)
+  ##### [1.11 gen-11](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v11.ipynb)
+  ##### [1.12 gen-12](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v12.ipynb)
+  ##### [1.13 gen-13](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v13.ipynb)
+  ##### [1.14 gen-14](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v14.ipynb)
+  ##### [1.15 gen-15](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v15.ipynb)
+  ##### [1.16 gen-16](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v16.ipynb)
+  ##### [1.17 gen-17](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v17.ipynb)
+  ##### [1.18 gen-18](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/ck_network_v18.ipynb)
+  #### [2. Neural Networks with Kaggle FAC Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-kaggle-fac-dataset)
+  ##### [2.1 gen-01](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v1.ipynb)
+  ##### [2.2 gen-02](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v2.ipynb)
+  ##### [2.3 gen-03](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v3.ipynb)
+  ##### [2.4 gen-04](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v4.ipynb)
+  ##### [2.5 gen-05](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v5.ipynb)
+  ##### [2.6 gen-06](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v6.ipynb)
+  ##### [2.7 gen-07](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v7.ipynb)
+  ##### [2.8 gen-08](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v8.ipynb)
+  ##### [2.9 gen-09](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v9.ipynb)
+  ##### [2.10 gen-10](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v10.ipynb)
+  ##### [2.11 gen-11](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v11.ipynb)
+  ##### [2.12 gen-12](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v12.ipynb)
+  ##### [2.13 gen-13](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v13.ipynb)
+  ##### [2.14 gen-14](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/kaggle_network_v14.ipynb)
 
   
 </details>
