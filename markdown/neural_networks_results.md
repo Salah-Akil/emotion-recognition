@@ -2,7 +2,7 @@
 
 The following headers contain the link for the jupyter notebooks for each neural network created and it's results on how it performs on real-life images. Many of them are completely unusable for high accuracy tasks, but the best model is the [Gen-12](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_12/test_model_v12.ipynb) CNN trained on the Kaggle Dataset.
 
-### 1. [Neural Networks with CK+ Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-ck-dataset)
+## 1. [Neural Networks with CK+ Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-ck-dataset)
 #### 1.1 [gen-01](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_01/test_model_v1.ipynb)
 #### 1.2 [gen-02](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_02/test_model_v2.ipynb)
 #### 1.3 [gen-03](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_03/test_model_v3.ipynb)
@@ -21,7 +21,7 @@ The following headers contain the link for the jupyter notebooks for each neural
 #### 1.16 [gen-16](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_16/test_model_v16.ipynb)
 #### 1.17 [gen-17](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_17/test_model_v17.ipynb)
 #### 1.18 [gen-18](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/CK%2B/gen_18/test_model_v18.ipynb)
-### 2. [Neural Networks with Kaggle FAC Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-kaggle-fac-dataset)
+## 2. [Neural Networks with Kaggle FAC Dataset](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/neural_networks_development.md#1-neural-networks-with-kaggle-fac-dataset)
 #### 2.1 [gen-01](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_01/test_model_v1.ipynb)
 #### 2.2 [gen-02](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_02/test_model_v2.ipynb)
 #### 2.3 [gen-03](https://github.com/Salah-Akil/emotion-recognition/blob/main/archive/Kaggle/gen_03/test_model_v3.ipynb)
