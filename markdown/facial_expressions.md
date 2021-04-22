@@ -84,7 +84,7 @@ The universal function of disgust is to get away from, block off, or eliminate s
 The most easily recognizable and obvious sign of disgust is the wrinkling of the nose.
 
 <p align="center">
-  <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/faceodisgust.png?raw=true">
+  <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/faceofdisgust.png?raw=true">
 </p>
 
 ### 4.2 Vocal expression of Disgust
