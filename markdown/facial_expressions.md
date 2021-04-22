@@ -17,7 +17,7 @@ These expressions display:
 * Sadness
 * Surprise
 
-(For more information visit Paul Ekman official [website](https://www.paulekman.com/universal-emotions/))
+(For more information check Paul Ekman official [website](https://www.paulekman.com/universal-emotions/))
 
 ## 2. Anger
 
@@ -43,7 +43,7 @@ For most, anger is vocalized as one of two ways: if not controlled, anger can ev
 
 Typical sensations include: feeling hot, (hence the term “seeing red”), sweating, muscle tension, and clenching one’s jaw and/or fists.
 
-### 2.4 Posture of anger
+### 2.4 Posture of Anger
 
 Most people find themselves leaning forward with their head/chin jutting forward and puffing their chest/body to appear larger.
 
@@ -58,7 +58,7 @@ It’s widely believed that the function of contempt is to signal a feeling of s
 Contempt is the only emotion with a unilateral facial expression, meaning that the expression is not symmetrical. The expression of contempt can occur with or without a hint of a smile or angry expression.
 
 <p align="center">
-  <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/faceocontempt.png?raw=true">
+  <img src="https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/images/faceofcontempt.png?raw=true">
 </p>
 
 ### 3.2 Vocal expression of Contempt

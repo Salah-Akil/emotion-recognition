@@ -138,12 +138,53 @@ The following headings contain the all the needed knowledge to reproduce this re
   
 </details>
 
-### VI. [Facial Expressions](https://github.com/Salah-Akil/emotion-recognition/)
+### VI. [Facial Expressions](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md)
 
 <details>
   <summary>Click to expand</summary>
   
-  #### 1. [To-Add](https://github.com/Salah-Akil/emotion-recognition/)
+  #### 1. [Universal Facial Expressions](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#1-universal-facial-expressions)
+  #### 2. [Anger](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#2-anger)
+  ##### 2.1 [Facial expression of Anger](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#21-facial-expression-of-anger)
+  ##### 2.2 [Vocal expression of Anger](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#22-vocal-expression-of-anger)
+  ##### 2.3 [Sensation of Anger](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#23-sensation-of-anger)
+  ##### 2.4 [Posture of Anger](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#24-posture-of-anger)
+
+  #### 3. [Contempt](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#3-contempt)
+  ##### 3.1 [Facial expression of Contempt](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#31-facial-expression-of-contempt)
+  ##### 3.2 [Vocal expression of Contempt](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#32-vocal-expression-of-contempt)
+  ##### 3.3 [Sensation of Contempt](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#33-sensation-of-contempt)
+  ##### 3.4 [Posture of Contempt](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#34-posture-of-contempt)
+
+  #### 4. [Disgust](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#4-disgust)
+  ##### 4.1 [Facial expression of Disgust](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#41-facial-expression-of-disgust)
+  ##### 4.2 [Vocal expression of Disgust](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#42-vocal-expression-of-disgust)
+  ##### 4.3 [Sensation of Disgust](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#43-sensation-of-disgust)
+  ##### 4.4 [Posture of Disgust](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#44-posture-of-disgust)
+
+  #### 5. [Fear](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#5-fear)
+  ##### 5.1 [Facial expression of Fear](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#51-facial-expression-of-fear)
+  ##### 5.2 [Vocal expression of Fear](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#52-vocal-expression-of-fear)
+  ##### 5.3 [Sensation of Fear](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#53-sensation-of-fear)
+  ##### 5.4 [Posture of Fear](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#54-posture-of-fear)
+
+  #### 6. [Happiness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#6-happiness)
+  ##### 6.1 [Facial expression of Happiness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#61-facial-expression-of-happiness)
+  ##### 6.2 [Vocal expression of Happiness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#62-vocal-expression-of-happiness)
+  ##### 6.3 [Sensation of Happiness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#63-sensation-of-happiness)
+  ##### 6.4 [Posture of Happiness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#64-posture-of-happiness)
+
+  #### 7. [Sadness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#7-sadness)
+  ##### 7.1 [Facial expression of Sadness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#71-facial-expression-of-sadness)
+  ##### 7.2 [Vocal expression of Sadness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#72-vocal-expression-of-sadness)
+  ##### 7.3 [Sensation of Sadness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#73-sensation-of-sadness)
+  ##### 7.4 [Posture of Sadness](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#74-posture-of-sadness)
+
+  #### 8. [Surprise](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#8-surprise)
+  ##### 8.1 [Facial expression of Surprise](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#81-facial-expression-of-surprise)
+  ##### 8.2 [Vocal expression of Surprise](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#82-vocal-expression-of-surprise)
+  ##### 8.3 [Sensation of Surprise](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#83-sensation-of-surprise)
+  ##### 8.4 [Posture of Surprise](https://github.com/Salah-Akil/emotion-recognition/blob/main/markdown/facial_expressions.md#84-posture-of-surprise)
 
   
 </details>
