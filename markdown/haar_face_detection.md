@@ -108,7 +108,7 @@ But the facial features detected in a grayscale image will have more realistic v
 For both the ideal and real features we have to calculate the delta Δ, which represents the difference between the average sum of all pixel values of the bottom darker zone and upper lighter zone (always darker zone - lighter zone).
 
 <p align="center">
-    <img src="https://render.githubusercontent.com/render/math?math=Δ = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)">
+    <img src="https://render.githubusercontent.com/render/math?math=\Delta = dark - light =  \frac{1}{n}\sum_{dark}^{n} I(x) - \frac{1}{n}\sum_{light}^{n}I(x)">
 </p>
 
 *I(x)* &rarr; Pixel intensity of a given pixel x.
@@ -181,7 +181,7 @@ For example the the pixel (x2,y1) in the integral image above can be calculated 
     <img src="https://render.githubusercontent.com/render/math?math=II (x2,y1) = 14">
 </p>
 
-Let's assume now we have to calculate the sum of the pixel intesity of a particular region in the original image, instead of calculating the all the pixels (which has a running time of O(N<sup>2</sup>)), we can simply manipulate the values in the integral image and get the same result.
+Let's assume now we have to calculate the sum of the pixel intensity of a particular region in the original image, instead of calculating the all the pixels (which has a running time of O(N<sup>2</sup>)), we can simply manipulate the values in the integral image and get the same result.
 
 Assuming we declare:
 
